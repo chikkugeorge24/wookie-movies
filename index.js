@@ -39,10 +39,6 @@ app.get("/", async (req, res) => {
   );
 });
 
-app.use((err, req, res) => {
-  res.status(500).json(ErrorRes(err.message, 500, err.message));
-});
-
 app.listen(port, () => {
   logger.info(
     `Wookie Movie App Server started on port: ${port} - 200 - Success`
